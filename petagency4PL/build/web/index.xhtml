@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+    <title>Registration Page</title>
+</head>
+<body>
+    <h:form>
+        <h:panelGrid columns="2" cellpadding="5">
+            <h:outputLabel for="username" value="Username:" />
+            <h:inputText id="username" value="#{ClientManagedBean.userName}" />
+
+            <h:outputLabel for="email" value="Email:" />
+            <h:inputText id="email" value="#{ClientManagedBean.email}" />
+
+            <h:outputLabel for="password" value="Password:" />
+            <h:inputSecret id="password" value="#{ClientManagedBean.password}" />
+        </h:panelGrid>
+        <h:commandButton value="Register" action="#{ClientManagedBean.addUser()}" />
+    </h:form>
+    <h:form>
+        <h:commandButton value="List of Users" action="#{ClientManagedBean.getUsersList()}" />    
+    </h:form>
+</body>
+</html>
